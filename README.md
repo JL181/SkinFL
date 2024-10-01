@@ -28,6 +28,13 @@ This project was developed using Python 3.8. Deep learning was performed using t
 - Handles data preprocessing and augmentation, preparing the skin cancer datasets for training and evaluation.
 
 
-## Datasets availability
-1. [HAM10000 Datasets](https://challenge.isic-archive.com/data/#2018)
-2. [ISIC2019 Datasets](https://challenge.isic-archive.com/data/#2019) 
+## Datasets Availability
+
+We utilized two authoritative multiclass dermoscopic image datasets, HAM10000 and ISIC2019, to evaluate our proposed FL method for the detection of pigmented skin lesions.
+
+1. [HAM10000 Datasets](https://challenge.isic-archive.com/data/#2018)  
+   The HAM10000 dataset consists of 10,015 dermoscopic images, categorized into seven types of skin lesions: melanoma, vascular lesions, benign keratosis lesions, dermatofibroma, melanocytic nevi, basal cell carcinoma, and actinic keratoses. All images were verified through histopathology, in vivo confocal microscopy, expert consensus, or follow-up assessments, ensuring high data quality and reliability.
+
+2. [ISIC2019 Datasets](https://challenge.isic-archive.com/data/#2019)  
+   The ISIC2019 dataset, being larger and more diverse than HAM10000, comprises 25,331 dermoscopic images and includes an additional class—squamous cell carcinoma—which is absent in HAM10000. This expanded dataset enables a broader evaluation across a diverse range of skin lesions.
+
