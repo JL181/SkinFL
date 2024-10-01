@@ -7,6 +7,27 @@ Malignant melanoma is highly invasive, with early detection significantly improv
 ### Prerequisites
 This project was developed using Python 3.8. Deep learning was performed using the PyTorch framework. Sections involving cryptography and secure federated learning were developed using OpenMinded's PySyft 0.2.9, TenSeal, and SyMPC.
 
+## Code Structure Overview
+
+### 1. Cryptographic
+- **PFHE.py**: This module contains the implementation of the Packed Fully Homomorphic Encryption (PFHE) scheme, essential for encrypted data aggregation and inference.
+
+### 2. PPFL (Privacy-Preserving Federated Learning)
+- **enc_Aggregation.py**: Handles the encrypted aggregation logic using PFHE, ensuring local updates from clients are securely aggregated without exposing raw data.
+- **federated_training.py**: Manages the overall federated training process, coordinating training across multiple clients, managing communication, and ensuring the model's privacy.
+
+### 3. network
+- **DoConv.py**: Implements the Depthwise Over-parameterized Convolution (DO-Conv) layer, improving model performance, particularly on non-IID data during local training.
+- **network.py**: Defines the architecture of the deep neural network (DNN) used in the framework, integrating DO-Conv to enhance accuracy and performance during training and inference.
+
+### 4. prognosis
+- **enc_Inference.py**: Handles encrypted inference, ensuring predictions are made while keeping patient data encrypted, safeguarding privacy.
+- **enc_network.py**: Contains network configuration and management for encrypted computations, especially for prediction purposes.
+
+### 5. preprocess.py
+- Handles data preprocessing and augmentation, preparing the skin cancer datasets for training and evaluation.
+
+
 ## Datasets availability
 1. [HAM10000 Datasets](https://challenge.isic-archive.com/data/#2018)
 2. [ISIC2019 Datasets](https://challenge.isic-archive.com/data/#2019) 
